@@ -25,7 +25,7 @@ namespace InsideDotNet
             }
             Console.WriteLine();
 
-            Console.WriteLine("Reading File using File.ReadAllLines()");
+            Console.WriteLine("Reading File using File.ReadAllLines()\n");
 
             // To read a text file line by line 
             if (File.Exists(file))
