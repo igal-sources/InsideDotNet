@@ -76,6 +76,9 @@
     <Compile Include="DelegatesDemo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataModels\lorem-ipsum.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
     <Content Include="DataModels\event-types.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -27,10 +27,16 @@ namespace InsideDotNet
             //lambda.LambdaOperationsOnUserDefinedClass();
             //#endregion
 
+            #region FileHandlingDemo
+
+            FileHandlingDemo fhd = new FileHandlingDemo();
+            fhd.ReadingFile();
+            #endregion
+
             #region ReflectionDemo
 
-            ReflectionDemo refl = new ReflectionDemo();
-            refl.ReflectionInvokeMethod();
+            //ReflectionDemo refl = new ReflectionDemo();
+            //refl.ReflectionInvokeMethod();
             #endregion
 
             #region InsideCustomAttributes
