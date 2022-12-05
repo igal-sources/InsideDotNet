@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     internal class LambdaStudent
     {

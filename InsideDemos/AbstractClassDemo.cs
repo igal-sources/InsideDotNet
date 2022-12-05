@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     public abstract class GeeksForGeeks
     {

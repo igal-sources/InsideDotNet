@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     // declaring an interface
     public interface InterfaceA

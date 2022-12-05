@@ -46,34 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractClassDemo.cs" />
-    <Compile Include="AssembliesDemo.cs" />
+    <Compile Include="InsideDemos\AbstractClassDemo.cs" />
+    <Compile Include="InsideDemos\AssembliesDemo.cs" />
     <Compile Include="DataContracts\AssemblyClassDemo.cs" />
     <Compile Include="DataContracts\EventTypes.cs" />
     <Compile Include="DataContracts\Student.cs" />
-    <Compile Include="DirectoriesAndFilesDemo.cs" />
-    <Compile Include="FileHandlingDemo.cs" />
-    <Compile Include="GenericCollectionsDemo.cs" />
+    <Compile Include="InsideDemos\DirectoriesAndFilesDemo.cs" />
+    <Compile Include="InsideDemos\FileHandlingDemo.cs" />
+    <Compile Include="InsideDemos\GenericCollectionsDemo.cs" />
     <Compile Include="Helpers\GeneralHelper.cs" />
-    <Compile Include="ArraysDemo.cs" />
-    <Compile Include="CustomAttributesDemo.cs" />
-    <Compile Include="CollectionsDemo.cs" />
-    <Compile Include="DictionariesDemo.cs" />
-    <Compile Include="EventsDemo.cs" />
-    <Compile Include="GenericsDemo.cs" />
-    <Compile Include="InterfaceDemo.cs" />
-    <Compile Include="InterfacesInheritanceDemo.cs" />
-    <Compile Include="LambdaExpressionsDemo.cs" />
-    <Compile Include="LINQDemo.cs" />
-    <Compile Include="MultithreadingDemo.cs" />
-    <Compile Include="OverloadingDemo.cs" />
-    <Compile Include="OverridingDemo.cs" />
-    <Compile Include="ReflectionDemo.cs" />
-    <Compile Include="SerializationDemo.cs" />
-    <Compile Include="TypeOfClassesDemo.cs" />
+    <Compile Include="InsideDemos\ArraysDemo.cs" />
+    <Compile Include="InsideDemos\CustomAttributesDemo.cs" />
+    <Compile Include="InsideDemos\CollectionsDemo.cs" />
+    <Compile Include="InsideDemos\DictionariesDemo.cs" />
+    <Compile Include="InsideDemos\EventsDemo.cs" />
+    <Compile Include="InsideDemos\GenericsDemo.cs" />
+    <Compile Include="InsideDemos\InterfaceDemo.cs" />
+    <Compile Include="InsideDemos\InterfacesInheritanceDemo.cs" />
+    <Compile Include="InsideDemos\LambdaExpressionsDemo.cs" />
+    <Compile Include="InsideDemos\LINQDemo.cs" />
+    <Compile Include="InsideDemos\MultithreadingDemo.cs" />
+    <Compile Include="InsideDemos\OverloadingDemo.cs" />
+    <Compile Include="InsideDemos\OverridingDemo.cs" />
+    <Compile Include="InsideDemos\ReflectionDemo.cs" />
+    <Compile Include="InsideDemos\SerializationDemo.cs" />
+    <Compile Include="InsideDemos\TypeOfClassesDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DelegatesDemo.cs" />
+    <Compile Include="InsideDemos\DelegatesDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataModels\lorem-ipsum.txt">

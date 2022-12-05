@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     public class CollectionsDemo
     {

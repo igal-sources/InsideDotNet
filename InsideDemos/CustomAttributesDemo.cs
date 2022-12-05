@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     //The code shows an example of a Custom Attribute named MyAttribute,
     //which has two private members namely 'name' and 'action'.

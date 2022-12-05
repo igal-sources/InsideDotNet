@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     internal class DictionariesDemo
     {

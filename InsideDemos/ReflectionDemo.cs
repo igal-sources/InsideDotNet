@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     public class ReflectionDemo
     {

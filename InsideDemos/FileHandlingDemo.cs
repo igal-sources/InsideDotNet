@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     public class FileHandlingDemo
     {

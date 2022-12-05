@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     // interface declaration
     internal interface IVehicle

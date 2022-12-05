@@ -1,5 +1,6 @@
-﻿using System;
-using static InsideDotNet.DelegatesDemo;
+﻿using InsideDotNet.InsideDemos;
+using System;
+using static InsideDotNet.InsideDemos.DelegatesDemo;
 
 namespace InsideDotNet
 {
@@ -20,6 +21,8 @@ namespace InsideDotNet
             //InsideSerializationDemo();
 
             InsideGenericCollectionsDemo();
+
+            Console.ReadKey();
         }
 
         private static void InsideGenericCollectionsDemo()
@@ -33,8 +36,7 @@ namespace InsideDotNet
             SerializationDemo ser = new SerializationDemo();
             var events = ser.DeserializeEvents();
 
-            string eventsString = ser.SerializeEvents(events);
-            Console.ReadKey();
+            string eventsString = ser.SerializeEvents(events);            
         }
 
         private static void InsideCustomAttributes()

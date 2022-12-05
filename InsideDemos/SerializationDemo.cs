@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using System.IO;
 
-namespace InsideDotNet
+namespace InsideDotNet.InsideDemos
 {
     public class EventItems
     {
