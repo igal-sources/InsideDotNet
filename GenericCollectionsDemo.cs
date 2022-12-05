@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsideDotNet
 {
@@ -21,12 +19,14 @@ namespace InsideDotNet
         /// </summary>
         private void SimpleListOfStrings()
         {
-            var cities = new List<string>();
-            cities.Add("New York");
-            cities.Add("London");
-            cities.Add("Mumbai");
-            cities.Add("Chicago");
-            cities.Add(null);// nulls are allowed for reference type list
+            var cities = new List<string>
+            {
+                "New York",
+                "London",
+                "Mumbai",
+                "Chicago",
+                null// nulls are allowed for reference type list
+            };
 
             //adding elements using collection-initializer syntax
             var bigCities = new List<string>()
@@ -41,10 +41,10 @@ namespace InsideDotNet
         private void ListOfObject()
         {
             var students = new List<StudentItem>() {
-                new StudentItem(){ Id = 1, StudentName="Bill", Mobile="1222"},
-                new StudentItem(){ Id = 2, StudentName="Steve", Mobile="3333"},
-                new StudentItem(){ Id = 3, StudentName="Ram", Mobile="4444"},
-                new StudentItem(){ Id = 4, StudentName="Abdul", Mobile="5555"}
+                new StudentItem(){ Id = 1, StudentName= "Bill",  Mobile= "1222"},
+                new StudentItem(){ Id = 2, StudentName= "Steve", Mobile= "3333"},
+                new StudentItem(){ Id = 3, StudentName= "Ram",   Mobile= "4444"},
+                new StudentItem(){ Id = 4, StudentName= "Abdul", Mobile= "5555"}
             };
 
             // using foreach LINQ method
@@ -56,7 +56,9 @@ namespace InsideDotNet
                          select s;
 
             foreach (var student in result)
+            {
                 Console.WriteLine(student.Id + ", " + student.StudentName);
+            }
 
             //Insert elements into List
             students.Insert(0, new StudentItem() { Id = 0, StudentName = "First", Mobile = "0000" });
@@ -84,19 +86,23 @@ namespace InsideDotNet
         /// SortedList stores key and value pairs. It automatically adds 
         /// the elements in ascending order of key by default.
         /// </summary>
-        private void SortedListDemo()
+        public void SortedListDemo()
         {
             //SortedList of int keys, string values 
-            SortedList<int, string> numberNames = new SortedList<int, string>();
-            numberNames.Add(3, "Three");
-            numberNames.Add(1, "One");
-            numberNames.Add(2, "Two");
-            numberNames.Add(4, null);
-            numberNames.Add(10, "Ten");
-            numberNames.Add(5, "Five");
+            SortedList<int, string> numberNames = new SortedList<int, string>
+            {
+                { 3, "Three" },
+                { 1, "One" },
+                { 2, "Two" },
+                { 4, null },
+                { 10, "Ten" },
+                { 5, "Five" }
+            };
 
             foreach (KeyValuePair<int, string> kvp in numberNames)
+            {
                 Console.WriteLine("key: {0}, value: {1}", kvp.Key, kvp.Value);
+            }
 
             //The following will throw exceptions
             //numberNames.Add("Three", 3); //Compile-time error: key must be int type
@@ -104,8 +110,8 @@ namespace InsideDotNet
             //numberNames.Add(null, "Five");//Run-time exception: key cannot be null
 
             numberNames.Add(6, "Six");
-            numberNames.Add(2, "Two");
-            numberNames.Add(4, "Four");//[System.ArgumentException: An entry with the same key already exists.]
+            numberNames.Add(7, "Seven");
+            //numberNames.Add(4, "Four");//[System.ArgumentException: An entry with the same key already exists.]
             
             Console.WriteLine(numberNames);
 
@@ -117,6 +123,8 @@ namespace InsideDotNet
                                         { "Mumbai", "India"},
                                         {"Johannesburg", "South Africa"}
                                     };
+            var res = cities.Where(x => x.Key == "London");
+            Console.WriteLine(res.First().Value);
         }
 
         /// <summary>
