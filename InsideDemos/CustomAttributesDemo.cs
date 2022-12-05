@@ -14,8 +14,8 @@ namespace InsideDotNet.InsideDemos
     {
         public ActionAttrAttribute(string name, string action)
         {
-            this.Name = name;
-            this.Action = action;
+            Name = name;
+            Action = action;
         }
 
         public string Name { get; }

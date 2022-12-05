@@ -8,27 +8,88 @@ namespace InsideDotNet
     {
         static void Main(string[] args)
         {
-            //InsideDelegatesDemo();
+            bool showMenu = true;
+            while (showMenu)
+            {
+                showMenu = MainMenu();
+                Console.ReadKey();
+            }
 
-            //InsideLambdaExpressions();
+            //InsideSingletonDemo();
 
-            //InsideFileHandlingDemo();
+        }
 
-            //InsideReflectionDemo();
+        private static bool MainMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Choose an option:");
+            Console.WriteLine("1) Delegates");
+            Console.WriteLine("2) Lambda Expressions");
+            Console.WriteLine("3) File Handling");
+            Console.WriteLine("4) Reflection");
+            Console.WriteLine("5) Custom Attributes");
+            Console.WriteLine("6) Serialization");
+            Console.WriteLine("7) Generic Collections");
+            Console.WriteLine("8) Singleton");
+            Console.WriteLine("9) Events");
+            Console.WriteLine("10) Custom Attributes");
+            Console.WriteLine("999) Exit");
+            Console.Write("\r\nSelect an option: ");
 
-            //InsideCustomAttributes();
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    InsideDelegatesDemo();
+                    return true;
+                case "2":
+                    InsideLambdaExpressions();
+                    return true;
+                case "3":
+                    InsideFileHandlingDemo();
+                    return true;
+                case "4":
+                    InsideReflectionDemo();
+                    return true;
+                case "5":
+                    InsideCustomAttributes();
+                    return true;
+                case "6":
+                    InsideSerializationDemo();
+                    return true;
+                case "7":
+                    InsideGenericCollectionsDemo();
+                    return true;
+                case "8":
+                    InsideSingletonDemo();
+                    return true;
+                case "9":
+                    InsideEventsDemo();
+                    return true;
+                case "10":
+                    InsideCustomAttributes();
+                    return true;
+                case "999":
+                    return false;
+                default:
+                    return true;
+            }
+        }
 
-            //InsideSerializationDemo();
-
-            InsideGenericCollectionsDemo();
-
-            Console.ReadKey();
+        private static void InsideSingletonDemo()
+        {
+            SingletonDemo.Instance.DoSingletonOperation();
         }
 
         private static void InsideGenericCollectionsDemo()
         {
             var attr = new GenericCollectionsDemo();
             attr.SortedListDemo();
+        }
+
+        private static void InsideEventsDemo()
+        {
+            var attr = new EventsDemo();
+            attr.EventsExample();
         }
 
         private static void InsideSerializationDemo()
