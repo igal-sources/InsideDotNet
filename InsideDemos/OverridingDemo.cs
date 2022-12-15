@@ -16,6 +16,7 @@ namespace InsideDotNet.InsideDemos
         //'show()' is 'override' here
         public override void show()
         {
+            base.show();
             Console.WriteLine("Derived class");
         }
     }

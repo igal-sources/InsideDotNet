@@ -33,6 +33,9 @@ namespace InsideDotNet
             Console.WriteLine("8) Singleton");
             Console.WriteLine("9) Events");
             Console.WriteLine("10) Custom Attributes");
+            Console.WriteLine("11) Asynchronous Task");
+            Console.WriteLine("12) Overriding");
+            Console.WriteLine("13) Generics");
             Console.WriteLine("999) Exit");
             Console.Write("\r\nSelect an option: ");
 
@@ -68,11 +71,43 @@ namespace InsideDotNet
                 case "10":
                     InsideCustomAttributes();
                     return true;
+                case "11":
+                    InsideAsynchronousTaskDemo();
+                    return true;
+                case "12":
+                    InsideOverridingDemo();
+                    return true;
+                case "13":
+                    InsideGenericsDemo();
+                    return true;
                 case "999":
                     return false;
                 default:
                     return true;
             }
+        }
+
+        private static void InsideGenericsDemo()
+        {
+            var generic = new GenericsDemo();
+            generic.GenericClassMethods();
+        }
+
+        private static void InsideOverridingDemo()
+        {
+            var overr = new OverridingDemo();
+            overr.SimpleOverriding();
+        }
+
+        private static async void InsideAsynchronousTaskDemo()
+        {
+            var taskDemo = new AsynchronousTaskDemo();
+            taskDemo.RunMultipleTasks();
+            taskDemo.RunTaskWithReturnValue();
+            var t = await taskDemo.GetUrlContentLengthAsync();
+            Console.WriteLine(t);
+
+            await taskDemo.ExecuteAsyncFunctions();
         }
 
         private static void InsideSingletonDemo()

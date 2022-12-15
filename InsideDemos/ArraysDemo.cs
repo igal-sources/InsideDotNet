@@ -11,7 +11,9 @@ namespace InsideDotNet.InsideDemos
 
             // Displaying Elements of array 
             foreach (string day in weekDays)
+            {
                 Console.Write(day + " ");
+            }
         }
 
         private void TwoDimensionalArray()

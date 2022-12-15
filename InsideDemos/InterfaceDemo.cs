@@ -2,6 +2,10 @@
 
 namespace InsideDotNet.InsideDemos
 {
+    // An interface can contain declarations of methods, properties, indexers, and events.
+    // The default access level for all interface members is public.
+    // An interface can inherit one or more interfaces.
+
     // interface declaration
     internal interface IVehicle
     {

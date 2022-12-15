@@ -51,6 +51,7 @@
     <Compile Include="DataContracts\AssemblyClassDemo.cs" />
     <Compile Include="DataContracts\EventTypes.cs" />
     <Compile Include="DataContracts\Student.cs" />
+    <Compile Include="InsideDemos\AsynchronousTaskDemo.cs" />
     <Compile Include="InsideDemos\DirectoriesAndFilesDemo.cs" />
     <Compile Include="InsideDemos\FileHandlingDemo.cs" />
     <Compile Include="InsideDemos\GenericCollectionsDemo.cs" />
