@@ -36,6 +36,7 @@ namespace InsideDotNet
             Console.WriteLine("11) Asynchronous Task");
             Console.WriteLine("12) Overriding");
             Console.WriteLine("13) Generics");
+            Console.WriteLine("14) JSON Demo");
             Console.WriteLine("999) Exit");
             Console.Write("\r\nSelect an option: ");
 
@@ -80,11 +81,23 @@ namespace InsideDotNet
                 case "13":
                     InsideGenericsDemo();
                     return true;
+                case "14":
+                    InsideWorkingWithJsonsDemo();
+                    return true;
                 case "999":
                     return false;
                 default:
                     return true;
             }
+        }
+
+        private static void InsideWorkingWithJsonsDemo()
+        {
+            var json = new JsonObjectsDemo();
+            json.ConvertJsonToObject();
+            json.ObjectToJSONStringConversion();
+            json.ConvertJsonArrayToList();
+            json.ObjectToJSONStringConversion();
         }
 
         private static void InsideGenericsDemo()
@@ -172,6 +185,11 @@ namespace InsideDotNet
             // These can be written as using "Invoke" method 
             del_obj1.Invoke(100, 40);
             del_obj2.Invoke(100, 60);
+
+            Console.WriteLine("DelegateSample" + Environment.NewLine);
+            obj.InvokeDelegateSample();
+
+            obj.GenericDelegateSample();
         }
     }
 }
