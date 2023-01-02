@@ -17,6 +17,11 @@ namespace InsideDotNet.InsideDemos
     public abstract class GeeksForGeeks
     {
         public abstract void Geeks();
+
+        public void MakeSound()
+        {
+            Console.WriteLine("Bark Bark");
+        }
     }
 
     public class Geek1 : GeeksForGeeks

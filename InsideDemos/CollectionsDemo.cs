@@ -1,5 +1,8 @@
-﻿using System;
+﻿using InsideDotNet.DataContracts;
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace InsideDotNet.InsideDemos
 {
@@ -32,6 +35,32 @@ namespace InsideDotNet.InsideDemos
             }
         }
 
+        private void ListGenericsDemo()
+        {
+            List<EventTypes> myList = new List<EventTypes>();
+            {
+                new EventTypes() { EventTypeId = 1, EventTypeName = "Event1" };
+                new EventTypes() { EventTypeId = 2, EventTypeName = "Event2" };
+                new EventTypes() { EventTypeId = 3, EventTypeName = "Event3" };
+                new EventTypes() { EventTypeId = 4, EventTypeName = "Event4" };
+            };
+
+            foreach (var arr in myList)
+            {
+                Console.WriteLine(arr);
+            }
+
+            var find = myList.Find(ev => ev.EventTypeName == "Event2");
+            var contains = myList.Where(ev => ev.EventTypeName == "Event2").FirstOrDefault();
+
+            IEnumerator enumerator = myList.GetEnumerator();
+
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.Current);
+            }
+        }
+
         /// <summary>
         /// Hashtable stores key and value pairs. It retrieves the values
         /// by comparing the hash value of the keys.
@@ -54,7 +83,7 @@ namespace InsideDotNet.InsideDemos
 
             cities["UK"] = "Liverpool, Bristol"; // update value of UK key
             cities["USA"] = "Los Angeles, Boston"; // update value of USA key
-                                                   //cities["France"] = "Paris"; //throws run-time exception: KeyNotFoundException
+            //cities["France"] = "Paris"; //throws run-time exception: KeyNotFoundException
 
             if (cities.ContainsKey("France"))
             {
@@ -68,6 +97,8 @@ namespace InsideDotNet.InsideDemos
         /// indicates the bit is off (0).
         /// </summary>
         private void BitArrayDemo()
-        { }
+        { 
+            
+        }
     }
 }

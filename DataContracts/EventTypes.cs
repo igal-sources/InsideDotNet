@@ -2,22 +2,23 @@
 
 namespace InsideDotNet.DataContracts
 {
-    public sealed partial class EventTypes
+    public class EventTypes
     {
         #region Primitive Properties
 
+        private int _eventTypeId;
         public int EventTypeId
         {
             get { return _eventTypeId; }
             set { if (_eventTypeId == value) return; _eventTypeId = value; }
         }
-        private int _eventTypeId;
 
         public string EventTypeName
         {
             get { return _eventTypeName; }
             set { if (_eventTypeName == value) return; _eventTypeName = value; }
         }
+
         private string _eventTypeName;
 
         public int ParentId
@@ -25,6 +26,7 @@ namespace InsideDotNet.DataContracts
             get { return _parentId; }
             set { if (_parentId == value) return; _parentId = value; }
         }
+
         private int _parentId;
 
         public int TermId
@@ -32,6 +34,7 @@ namespace InsideDotNet.DataContracts
             get { return _termId; }
             set { if (_termId == value) return; _termId = value; }
         }
+
         private int _termId;
 
         public byte[] Icon
@@ -39,6 +42,7 @@ namespace InsideDotNet.DataContracts
             get { return _icon; }
             set { if (_icon == value) return; _icon = value; }
         }
+
         private byte[] _icon;
 
         public System.DateTime DateCreated
@@ -46,6 +50,7 @@ namespace InsideDotNet.DataContracts
             get { return _dateCreated; }
             set { if (_dateCreated == value) return; _dateCreated = value; }
         }
+
         private System.DateTime _dateCreated;
 
         public System.DateTime DateModified
@@ -53,6 +58,7 @@ namespace InsideDotNet.DataContracts
             get { return _dateModified; }
             set { if (_dateModified == value) return; _dateModified = value; }
         }
+
         private System.DateTime _dateModified;
 
         public string Description
@@ -60,6 +66,7 @@ namespace InsideDotNet.DataContracts
             get { return _description; }
             set { if (_description == value) return; _description = value; }
         }
+
         private string _description;
 
         public string AdditionalValues
@@ -67,6 +74,7 @@ namespace InsideDotNet.DataContracts
             get { return _additionalValues; }
             set { if (_additionalValues == value) return; _additionalValues = value; }
         }
+
         private string _additionalValues;
 
         public string ChangedBy
@@ -74,6 +82,7 @@ namespace InsideDotNet.DataContracts
             get { return _changedBy; }
             set { if (_changedBy == value) return; _changedBy = value; }
         }
+
         private string _changedBy;
 
         public System.Guid CITguid
@@ -81,6 +90,7 @@ namespace InsideDotNet.DataContracts
             get { return _cITguid; }
             set { if (_cITguid == value) return; _cITguid = value; }
         }
+
         private System.Guid _cITguid;
 
         public int ConfigVersion
@@ -88,6 +98,7 @@ namespace InsideDotNet.DataContracts
             get { return _configVersion; }
             set { if (_configVersion == value) return; _configVersion = value; }
         }
+
         private int _configVersion;
 
         public ObservableCollection<EventTypes> Children { get; set; }

@@ -98,6 +98,7 @@
     <Compile Include="InsideDemos\MultithreadingDemo.cs" />
     <Compile Include="InsideDemos\OverloadingDemo.cs" />
     <Compile Include="InsideDemos\OverridingDemo.cs" />
+    <Compile Include="InsideDemos\PartialClassesDemo.cs" />
     <Compile Include="InsideDemos\ReflectionDemo.cs" />
     <Compile Include="InsideDemos\SerializationDemo.cs" />
     <Compile Include="InsideDemos\SingletonDemo.cs" />
@@ -112,6 +113,9 @@
     </Content>
     <None Include="App.config" />
     <Content Include="DataModels\event-types.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataModels\eventTypeById.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="DataModels\unit-types.json" />

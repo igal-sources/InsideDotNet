@@ -14,9 +14,6 @@ namespace InsideDotNet
                 showMenu = MainMenu();
                 Console.ReadKey();
             }
-
-            //InsideSingletonDemo();
-
         }
 
         private static bool MainMenu()
@@ -115,6 +112,10 @@ namespace InsideDotNet
         private static async void InsideAsynchronousTaskDemo()
         {
             var taskDemo = new AsynchronousTaskDemo();
+
+            var res = taskDemo.CheckConnection();
+            Console.WriteLine("CheckConnection: " + res.Result);
+        
             taskDemo.RunMultipleTasks();
             taskDemo.RunTaskWithReturnValue();
             var t = await taskDemo.GetUrlContentLengthAsync();
@@ -145,7 +146,13 @@ namespace InsideDotNet
             SerializationDemo ser = new SerializationDemo();
             var events = ser.DeserializeEvents();
 
-            string eventsString = ser.SerializeEvents(events);            
+            var eventById = ser.DeserializeEventById();
+            string eventString = ser.SerializeEventById(eventById);
+            Console.WriteLine("SerializeEvents: \n" + eventString);
+
+            //string eventsString = ser.SerializeEvents(events);
+            //Console.WriteLine("SerializeEvents: \n" + eventsString);
+
         }
 
         private static void InsideCustomAttributes()

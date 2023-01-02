@@ -7,6 +7,20 @@ namespace InsideDotNet.InsideDemos
 {
     internal class AsynchronousTaskDemo
     {
+        public async Task<bool> CheckConnection()
+        {
+            return await TestConnection();
+        }
+
+        private async Task<bool> TestConnection()
+        {
+            var result = await Task.Run(() =>
+            {
+                return true;
+            });
+
+            return result;
+        }
         public void RunMultipleTasks() 
         {
             Console.WriteLine("Run Multiple Tasks" + Environment.NewLine);
@@ -57,7 +71,7 @@ namespace InsideDotNet.InsideDemos
             Console.WriteLine(Environment.NewLine);
             Console.WriteLine("Run Task With Return Value");
 
-            var t = Task<int>.Factory.StartNew(() => {
+            var t1 = Task.Run(() => {
                 // Just loop.
                 int max = 1000000;
                 int ctr = 0;
@@ -71,7 +85,25 @@ namespace InsideDotNet.InsideDemos
                 }
                 return ctr;
             });
-            Console.WriteLine("Finished {0:N0} iterations.", t.Result);
+
+            var t2 = Task<int>.Factory.StartNew(() => {
+                // Just loop.
+                int max = 2000000;
+                int ctr = 0;
+                for (ctr = 0; ctr <= max; ctr++)
+                {
+                    if (ctr == max / 2 && DateTime.Now.Hour <= 12)
+                    {
+                        ctr++;
+                        break;
+                    }
+                }
+                return ctr;
+            });
+
+            Task.WaitAll(t1, t2);
+            Console.WriteLine("Finished 1 {0:N0} iterations.", t1.Result);
+            Console.WriteLine("Finished 2 {0:N0} iterations.", t2.Result);
         }
 
         public async Task<int> GetUrlContentLengthAsync()
