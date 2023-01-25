@@ -102,6 +102,7 @@
     <Compile Include="InsideDemos\ReflectionDemo.cs" />
     <Compile Include="InsideDemos\SerializationDemo.cs" />
     <Compile Include="InsideDemos\SingletonDemo.cs" />
+    <Compile Include="InsideDemos\StringBuilderDemo.cs" />
     <Compile Include="InsideDemos\TypeOfClassesDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

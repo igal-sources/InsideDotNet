@@ -7,7 +7,7 @@ namespace InsideDotNet.InsideDemos
 {
     public class Department
     {
-        public int DeptId { get; set; }
+        public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
     }
 
@@ -20,14 +20,17 @@ namespace InsideDotNet.InsideDemos
             Department deptObj = JsonSerializer.Deserialize<Department>(jsonData);
 
             Console.WriteLine("Convert Json To Object");
-            Console.WriteLine("Department Id: {0}", deptObj.DeptId);
+            Console.WriteLine("Department Id: {0}", deptObj.DepartmentId);
             Console.WriteLine("Department Name: {0}", deptObj.DepartmentName);
+            Console.WriteLine(Environment.NewLine);
         }
 
         public void ConvertJsonArrayToList()
         {
-            string jsonArray = "[{\"DeptId\": 101,\"DepartmentName\":\"IT\" }, " +
-                                "{\"DeptId\": 102,\"DepartmentName\":\"Accounts\" }]";
+            string jsonArray = @"[
+                                    {""DepartmentId"": 101, ""DepartmentName"": ""IT"" },
+                                    {""DepartmentId"": 102, ""DepartmentName"": ""Accounts"" }
+                                 ]";
 
             var deptList = JsonSerializer.Deserialize<IList<Department>>(jsonArray);
 
@@ -35,21 +38,26 @@ namespace InsideDotNet.InsideDemos
 
             foreach (var dept in deptList)
             {
-                Console.WriteLine("Department Id is: {0}", dept.DeptId);
+                Console.WriteLine("Department Id is: {0}", dept.DepartmentId);
                 Console.WriteLine("Department Name is: {0}", dept.DepartmentName);
             }
 
-            var linqRes = deptList.Where(x => x.DeptId == 101).FirstOrDefault();
+            Console.WriteLine(Environment.NewLine);
+
+            var linqRes = deptList.Where(x => x.DepartmentId == 101).FirstOrDefault();
             Console.WriteLine("LINQ to find DepartmentName by DeptId: " + linqRes.DepartmentName);
+
+            Console.WriteLine(Environment.NewLine);
         }
 
         public void ObjectToJSONStringConversion()
         {
-            Department dept = new Department() { DeptId = 101, DepartmentName = "IT" };
+            Department dept = new Department() { DepartmentId = 101, DepartmentName = "IT" };
             string strJson = JsonSerializer.Serialize(dept);
 
             Console.WriteLine("Convert Json to string");
             Console.WriteLine("JSON string result: " + strJson);
+            Console.WriteLine(Environment.NewLine);
         }
     }
 }

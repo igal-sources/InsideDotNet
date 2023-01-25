@@ -51,6 +51,7 @@ namespace InsideDotNet.InsideDemos
             }
 
             var find = myList.Find(ev => ev.EventTypeName == "Event2");
+            var find1 = myList.Select(ev => ev.EventTypeName == "Event2");
             var contains = myList.Where(ev => ev.EventTypeName == "Event2").FirstOrDefault();
 
             IEnumerator enumerator = myList.GetEnumerator();

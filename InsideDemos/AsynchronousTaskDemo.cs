@@ -49,6 +49,7 @@ namespace InsideDotNet.InsideDemos
 
             // Construct a started task using Task.Run.
             string taskData = "delta";
+
             Task t3 = Task.Run(() => {
                 Console.WriteLine("Task={0}, obj={1}, Thread={2}",
                                    Task.CurrentId, taskData,
